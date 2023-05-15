@@ -1,0 +1,7 @@
+<button (click) = "switchVisibility()">Display Details</button>
+
+<p *ngIf = "paragraphVisibility">This is my paragraph</p>
+<p *ngFor = "let click of clicks; let el = index" 
+[ngStyle] = "{ 'backgroundColor': getColor(el)}"
+[ngClass] = "{ 'bigParagraph' : paragraphGT5(el) }"
+>{{click}}</p>
